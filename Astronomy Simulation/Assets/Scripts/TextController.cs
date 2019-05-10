@@ -11,6 +11,7 @@ public class TextController : MonoBehaviour
     public GameObject topDownPlane;
     public GameObject earthViewPlane;
     public GameObject differentSpectrumPlane;
+    public GameObject galacticCenter;
     private bool isTopTextActive;
     private bool isEarthTextActive;
     private bool isSpectrumTextActive;
@@ -21,6 +22,7 @@ public class TextController : MonoBehaviour
         centerFromEarthText.SetActive(false);
         differentSpectrumViewText.SetActive(false);
         artisticImpressionText.SetActive(false);
+        galacticCenter.SetActive(false);
         isTopTextActive = true;
         isEarthTextActive = false;
         isSpectrumTextActive = false;
@@ -48,6 +50,13 @@ public class TextController : MonoBehaviour
             differentSpectrumPlane.SetActive(false);
             isSpectrumTextActive = false;
             artisticImpressionText.SetActive(true);
+            galacticCenter.SetActive(true);
+        }
+        if (artisticImpressionText.activeSelf)
+        {
+            topDownText.SetActive(false);
+            centerFromEarthText.SetActive(false);
+            differentSpectrumViewText.SetActive(false);
         }
     }
 }

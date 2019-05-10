@@ -5,7 +5,8 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     public GameObject finalPicture;
-    private static Vector3 POSITION_MOVING_TOWARDS = new Vector3(31.7f, 5.7f, -8f);
+    public GameObject center;
+    private static Vector3 POSITION_MOVING_TOWARDS = new Vector3(13.7f, 5.7f, -13f);
     private static Quaternion QUATERNION_ROTATING_TOWARDS = new Quaternion(0.0f, -90.0f, 0f, 0f);
     private int angle;
     private Transform startPosition;
@@ -21,19 +22,21 @@ public class CameraScript : MonoBehaviour
         if (!finalPicture.activeSelf)
         {
             //   transform.Translate(new Vector3(0.1f, 0.1f));
-           /* if(Mathf.Abs(transform.position.y - POSITION_MOVING_TOWARDS.y) < 0.5){
-                
-            }
-            else if (Mathf.Abs(transform.position.x - POSITION_MOVING_TOWARDS.x) < 0.5 )
-            {
-                transform.Translate(new Vector3(0f, -0.1f, 0f));
-                transform.localRotation.Set(transform.rotation.x, transform.rotation.y, 90.0f, transform.rotation.w);
-                
-            }
-            else
-            {*/
+            /* if(Mathf.Abs(transform.position.y - POSITION_MOVING_TOWARDS.y) < 0.5){
+
+             }
+             else if (Mathf.Abs(transform.position.x - POSITION_MOVING_TOWARDS.x) < 0.5 )
+             {
+                 transform.Translate(new Vector3(0f, -0.1f, 0f));
+                 transform.localRotation.Set(transform.rotation.x, transform.rotation.y, 90.0f, transform.rotation.w);
+
+             }
+             else
+             {*/
+            Vector3 relativePosition = center.transform.position - transform.position;
                 transform.position = Vector3.Lerp(startPosition.position, POSITION_MOVING_TOWARDS, Time.deltaTime / 2);
-            transform.rotation = Quaternion.Lerp(transform.rotation, QUATERNION_ROTATING_TOWARDS, Time.deltaTime / 2);
+            transform.rotation = Quaternion.LookRotation(relativePosition);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, QUATERNION_ROTATING_TOWARDS, Time.deltaTime / 2);
             //StartCoroutine("RotateCamera");
             
             //}

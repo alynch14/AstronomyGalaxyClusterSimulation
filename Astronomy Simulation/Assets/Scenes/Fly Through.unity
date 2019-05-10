@@ -112,6 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &134933884 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7147299730790747561, guid: 81ac848ece6c6524a8957089315a7bb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 579618180}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &136239522 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4148581353273825396, guid: 11379b2edd97f5542a47add2bf410ca3,
@@ -441,6 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finalPicture: {fileID: 1005870940}
+  center: {fileID: 1579310113}
 --- !u!1001 &579618180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -507,6 +514,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626681056578870722, guid: 81ac848ece6c6524a8957089315a7bb5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338594063877604071, guid: 81ac848ece6c6524a8957089315a7bb5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338594063877604071, guid: 81ac848ece6c6524a8957089315a7bb5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338594063877604071, guid: 81ac848ece6c6524a8957089315a7bb5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81ac848ece6c6524a8957089315a7bb5, type: 3}
@@ -682,6 +709,7 @@ MonoBehaviour:
   topDownPlane: {fileID: 834385364}
   earthViewPlane: {fileID: 136239522}
   differentSpectrumPlane: {fileID: 1005870940}
+  galacticCenter: {fileID: 134933884}
 --- !u!1 &1005870940 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 632070960977352263, guid: e2e8de85e6c7f0040a9f0ddcb650f422,
@@ -912,6 +940,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519228388}
   m_CullTransparentMesh: 0
+--- !u!1 &1579310113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3743489708301805245, guid: 81ac848ece6c6524a8957089315a7bb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 579618180}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1703119800
 GameObject:
   m_ObjectHideFlags: 0
